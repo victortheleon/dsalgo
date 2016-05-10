@@ -22,3 +22,15 @@ class Stack(object):
     
     def size(self):
         return len(self.stack)
+
+
+def reverse(line):
+    st = Stack()
+    for char in line:
+        st.push(char)
+    rev = ""
+    while not st.is_empty():
+        rev += st.pop()
+    return rev
+
+print reverse("manish")
